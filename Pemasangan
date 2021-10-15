@@ -1,0 +1,18 @@
+BASE SC BY XINZ TEAM
+CREATOR BY DINATA
+
+UP YT / RECORD , WM JAN DI HAPUS KONTOL 
+Kasih wm Dinata × XinzTeam
+
+Cara penginstalan bot nya 
+
+FOR TERMUX
+
+termux-setup-storage
+apt update && apt upgrade
+pkg install nodejs git ffmpeg libwebp imagemagick
+cd /sdcard
+cp -r 
+cd XinzBot
+npm install
+node main
