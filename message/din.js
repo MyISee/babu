@@ -759,7 +759,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                   break
                                case prefix+'off':
                   if (!isOwner)return reply(mess.OnlyOwner)
-                  reply('Berhasil menonaktifkan bot")
+                  reply('Berhasil menonaktifkan bot')
                   await sleep(5000)
                   process.exit()
                   break
