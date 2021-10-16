@@ -194,14 +194,14 @@ module.exports = async (xinz, msg, _afk, welcome, left) => {
         const tanggal = moment().format("ll")
         
         let mengt =`${fakeTromli}`        
-        const fakeTroli = {key: {fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? {remoteJid: "status@broadcast" } : {}) }, message: {orderMessage: {itemCount: 2021, status: 200, surface: 200, message: mengt, orderTitle: mengt, thumbnail: fs.readFileSync(setting.pathImg), sellerJid: '0@s.whatsapp.net'}}}        
+        const fakeTroli = {key: {fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? {remoteJid: "status@broadcast" } : {}) }, message: {orderMessage: {itemCount: 503, status: 200, surface: 200, message: mengt, orderTitle: mengt, thumbnail: fs.readFileSync(setting.pathImg), sellerJid: '0@s.whatsapp.net'}}}        
         const fakelokasi = {key: {fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? {remoteJid: "status@broadcast" } : {}) }, message: {locationMessage: {degreesLatitude: -7.0389318, degreesLongitude: 113.8969749, name: 'YAN-BOT BC', address: 'Halo', jpegThumbnail: fs.readFileSync('./media/din.jpg')}}}        
         const faketoko = {key: {fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? {remoteJid: "status@broadcast" } : {}) }, message: {productMessage: {product: {currencyCode: "BRL", title: 'YAN-BOT', priceAmount1000: 0, productImageCount: 0, productImage: {jpegThumbnail: fs.readFileSync('./media/din.jpg')}}, businessOwnerJid: "0@s.whatsapp.net"}}}        
         const fgc = {key: {"fromMe": false,"participant": "0@s.whatsapp.net","remoteJid": "62895619083555-1616169743@g.us"},"message": {"groupInviteMessage": {"groupJid": "62895619083555-1616169743@g.us","inviteCode": "mememteeeekkeke","groupName": "P", "caption": `My Bot`, thumbnail: fs.readFileSync('./media/din.jpg')}}}
         const ftext = {key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})},message: { "extendedTextMessage": {"text": `Ayam goy3ng?`,"title": `Beliii!`,'jpegThumbnail': fs.readFileSync(setting.pathImg)}}}
 
         let fakeLink = {
-             "title": `Hai sayang ${pushname}`,
+             "title": `Hai ${pushname} sayang`,
              "body": `${jam}`,
              "previewType": "VIDIO",
              "thumbnail": fs.readFileSync(setting.pathImg),
@@ -398,7 +398,7 @@ await xinz.relayWAMessage(item)
                 participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) },
                 message: { "imageMessage": {
                 "mimetype": "image/jpeg", 
-                "caption": "Loaxinzg menu nya", 
+                "caption": "Sedang loading!", 
                 "jpegThumbnail": fs.readFileSync(setting.pathImg)
                 }
            }
@@ -412,7 +412,7 @@ await xinz.relayWAMessage(item)
 
 // Fake Yutube        
         let fakeYutub = {
-             "title": `Hai sayang ${pushname}`,
+             "title": `Hai ${pushname} sayang`,
              "body": `${jam}`,
              "mediaType": 2,
              "previewType": 2,
@@ -500,7 +500,7 @@ await xinz.relayWAMessage(item)
         }
 
         // Banned
-        if (isBan) return reply(`Maaf sayang @${sender.split("@")[0]} anda sudah terblokir/ter ban oleh bot\nchat Wa.me/${owner} untuk membuka ban tersebut`)
+        if (isBan) return reply(`Maaf @${sender.split("@")[0]} sayang kamu sudah terblokir/ter ban oleh bot\nchat Wa.me/${owner} untuk membuka ban tersebut`)
         BannedExpired(ban)
 
         // MUTE
@@ -590,7 +590,7 @@ await xinz.relayWAMessage(item)
                         const butafk = [
             {buttonId: '!hedeh', buttonText: {displayText: 'Oke lah'}, type: 1}            
                          ]
-        let taiafk = `*Afk Mode 💤*\n\n_Mohon maaf sayang @${ment.split('@')[0]} Sedang afk_`
+        let taiafk = `*Afk Mode 💤*\n\n_Mohon maaf @${ment.split('@')[0]} sedang afk_`
         let alesafk = `• *Alasan* : ${getReason}\n• *Sejak* : ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu`
         let dehafk =`Patnert ditemukan , mohon sopan ke dia ya sayang`
                 const buttonafk = {
@@ -759,13 +759,13 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                   break
                                case prefix+'off':
                   if (!isOwner)return reply(mess.OnlyOwner)
-                  reply('Sukses Mematikan Bot, byeee 👋')
+                  reply('Berhasil menonaktifkan bot")
                   await sleep(5000)
                   process.exit()
                   break
 			
             case prefix+'report':
-                 if (args.length < 2) return textImg('Lu mau lapor apa?')
+                 if (args.length < 2) return textImg('kamu mau lapor apa sayang?')
                  var waktu = moment().format('DD/MM/YY')
                                   var yahaha = ["fakelokasi"]
                  var fake = pickRandom(yahaha)
@@ -835,7 +835,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                       let culek =`Teman ditemukan , mohon sopan ke dia ya sayang`
                       const buttonMessage = {
                           contentText: culek,
-                          footerText: 'Cie gk punya temen ya pakek fitur ini\npower by *YAN-BOT*',
+                          footerText: 'Cie gk punya temen ya pakek fitur ini\n*YAN-BOT*',
                           buttons: buttons,
                           headerType: 1
                                      }
@@ -870,7 +870,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
             if (!isQuotedSticker) return reply('Reply Sticker')
             let cmde1 = quotedMsg.stickerMessage.fileSha256.toString('base64')
             let find1 = stickcmd.find(v => v.id == cmde1)
-            if (find1) return reply("Udh ada sticker nya")
+            if (find1) return reply("stickernya udah ada!")
             let obj = {
                 id: cmde1,
                 command: q
@@ -1281,7 +1281,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                 ])
                     .on('error', () => reply(mess.error.api))
                     .on('exit', () => {
-                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `Jangan malas pak...` })
+                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `inget ya sayang kamu ga boleh males-malesan` })
                         limitAdd(sender, limit)
                     })
             }
@@ -1310,7 +1310,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                 ])
                     .on('error', () => reply(mess.error.api))
                     .on('exit', () => {
-                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `Jangan malas pak...` })
+                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `inget ya sayang kamu ga boleh males-malesan` })
                         limitAdd(sender, limit)
                     })
             }
@@ -1339,7 +1339,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                 ])
                     .on('error', () => reply(mess.error.api))
                     .on('exit', () => {
-                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `Jangan malas pak...` })
+                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `inget ya sayang kamu ga boleh males-malesan` })
                         limitAdd(sender, limit)
                     })
             }
@@ -1368,7 +1368,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                 ])
                     .on('error', () => reply(mess.error.api))
                     .on('exit', () => {
-                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `Jangan malas pak...` })
+                        xinz.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, { quoted: msg, thumbnail: Buffer.alloc(0), caption: `inget ya sayang kamu ga boleh males-malesan` })
                         limitAdd(sender, limit)
                     })
             }
@@ -1463,7 +1463,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
             case prefix+'harta': case prefix+'hartatahta': case prefix+'tahta':
                 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
                 if (args.length < 2) return reply(`Penggunaan ${command} text`)
-                reply('[❗] Hirti Tihti Tai Anjg :v')
+                reply('[❗] Harta tahta sok-sok lu jelek')
                 xinz.sendImage(from, await getBuffer(`https://api.zeks.xyz/api/hartatahta?apikey=apivinz&text=${q}`), '', msg).catch(() => reply(mess.error.api))
                 limitAdd(sender, limit)
                 break
@@ -3276,7 +3276,7 @@ xinz.sendMessage(from, img, image, {quoted: fakeTroli, caption: menuhe, contextI
 break  
             default:
             if (isCmd) {
-                textImg(`Maaf sayang ${pushname} ${command} tidak ada didalam menu bot`)
+                textImg(`Maaf ${pushname} sayang ${command} tidak ada didalam menu bot`)
             }                 
         }
     } catch (err) {
