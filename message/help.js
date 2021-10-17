@@ -189,18 +189,18 @@ exports.infobot = (botName, pendaftar) => {
 exports.help = (ucapanWaktu, sender, email, owner, ig) => {
      return `${ucapanWaktu} @${sender.split("@")[0]} 👋
 
-💌 Contak personel 
+Support contact
 ${email}
 
-📎 Instagram
-${ig}
+Instagram
+${instagram}
 
-👤Creator Bot
+Creator Bot
 @${owner}
 
-📌 Total Fitur 150+
+Total Fitur 150+
 
-Silahkan pilih info bot saya kak`}
+Hai sayang silahkan pilih menu yang ada di dalam bot`}
 
 exports.sewa = (ucapanWaktu, botName, owner) => {
 return `━━ *「 YAN BOT - INDO 」* ━━

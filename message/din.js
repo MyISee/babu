@@ -588,7 +588,7 @@ await xinz.relayWAMessage(item)
                         const getTime = Date.now() - afk.getAfkTime(getId, _afk)
                         const heheh = ms(getTime)
                         const butafk = [
-            {buttonId: '!hedeh', buttonText: {displayText: 'Oke lah'}, type: 1}            
+            {buttonId: 'afk mulu', buttonText: {displayText: 'sampai kapan kamu afk?'}, type: 1}            
                          ]
         let taiafk = `*Afk Mode 💤*\n\n_Mohon maaf @${ment.split('@')[0]} sedang afk_`
         let alesafk = `• *Alasan* : ${getReason}\n• *Sejak* : ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu`
@@ -627,17 +627,17 @@ await xinz.relayWAMessage(item)
         if (isCmd && !isGroup) {
             //xinz.updatePresence(from, Presence.composing)
             addBalance(sender, randomNomor(20), balance)
-            console.log(color('[DIN]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`))
+            console.log(color('[YAN]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`))
         }
         if (isCmd && isGroup) {
             //xinz.updatePresence(from, Presence.composing)
             addBalance(sender, randomNomor(20), balance)
-            console.log(color('[DIN]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
+            console.log(color('[YAN]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
         }
 
         if (isOwner) {
             if (chats.startsWith("> ")) {
-                console.log(color('[DIN-VAL]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`DIN-BOT ada dimana mana`))
+                console.log(color('[YAN-VAL]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`YAN-BOT ada dimana mana`))
                 try {
                     let evaled = await eval(chats.slice(2))
                     if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
@@ -646,7 +646,7 @@ await xinz.relayWAMessage(item)
                     textImg(`${err}`)
                 }
             } else if (chats.startsWith("$ ")) {
-                console.log(color('[DIN-EXE]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`DIN-BOT ada dimana mana`))
+                console.log(color('[YAN-EXE]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`YAN-BOT ada dimana mana`))
                 exec(chats.slice(2), (err, stdout) => {
                     if (err) return textImg(`${err}`)
                     if (stdout) textImg(`${stdout}`)})}}
@@ -717,12 +717,12 @@ res = await xinz.prepareMessageFromContent(from,{
 "productMessage": {
 "product": {
 "productImage": imgMsg,
-"productId": "0",
+"productId": "503",
 "title": `LIST MENU ${botName}`,
 "description": menuhe,
 "footerText": `pengen ayam goyeng!`,
-"currencyCode": "IDR",
-"priceAmount1000": "0",
+"currencyCode": "USD",
+"priceAmount1000": "9000000000",
 "productImageCount": 1
 },
 "businessOwnerJid": `${ownerNumber}`,
@@ -733,7 +733,7 @@ xinz.relayWAMessage(res)
 }
 break
 case 'Mks': {
-const me = `Ya sama sama sayang ${pushname}`
+const me = `Ya sama sama ${pushname} sayang`
 
 xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
 						text: "Dream Bot",
@@ -741,7 +741,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
 						isForwarded: true,
 						sendEphemeral: true,
 						externalAdReply: {
-							title: `Hem Sama sama om`,
+							title: `Hem Sama sama sayang`,
 							body: "",
 							previewType: 1,
 							thumbnail: fs.readFileSync(setting.pathImg),
@@ -788,7 +788,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                 case prefix+'patnertbot':
                 case prefix+'patnert':
                 case prefix+'botpatnert':{
-                    let listown = [`${ownerNumber}`,'6281916849086','6287863200063']
+                    let listown = [`${ownerNumber}`,'6289649627900','6289649622662']
                     let arrey = []
                     for ( let x of listown){
                         const getnem = xinz.getName(x + '@s.whatsapp.net')
@@ -825,17 +825,17 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
               break   
               case prefix+'cariteman':{
                           var nomor = pendaftar[Math.floor(Math.random() * pendaftar.length)]
-                          var nama = `Teman acak`
+                          var nama = `TEMAN ACAK`
                       xinz.sendContact(from, nomor.split("@")[0], nama, msg)
                            await sleep(1000)   
                       const buttons = [
-                            {buttonId: prefix+'cariteman', buttonText: {displayText: 'Next ⏩'}, type: 1},
-                            {buttonId: prefix+'menubot', buttonText: {displayText: 'Back ⏪'}, type: 1}
+                            {buttonId: prefix+'cariteman', buttonText: {displayText: 'Next'}, type: 1},
+                            {buttonId: prefix+'menubot', buttonText: {displayText: 'Back'}, type: 1}
                                        ]
                       let culek =`Teman ditemukan , mohon sopan ke dia ya sayang`
                       const buttonMessage = {
                           contentText: culek,
-                          footerText: 'Cie gk punya temen ya pakek fitur ini\n*YAN-BOT*',
+                          footerText: 'Cie gk punya temen ya pakai fitur ini\n*Beliin ayam goyeng*',
                           buttons: buttons,
                           headerType: 1
                                      }
@@ -860,7 +860,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                        {buttonId: prefix+'owner', buttonText: {displayText: 'Owner Bot'}, type: 1}
                                   ]
 
-                   sendButImage(from, menunya, `Power By *${botName}*\nOwner by ${ownerName}`, fs.readFileSync('./media/Qris.jpg'), buttons, {quoted: msg, contextInfo:{mentionedJid: [ownerNumber, sender]}})
+                   sendButImage(from, menunya, `*${botName}*\nOwner by ${ownerName}`, fs.readFileSync('./media/Qris.jpg'), buttons, {quoted: msg, contextInfo:{mentionedJid: [ownerNumber, sender]}})
                }
               break
 
@@ -962,7 +962,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                         qrcode.toDataURL(qr, { scale: 8 }, async (err, Durl) => {
                             const data = Durl.replace(/^data:image\/png;base64,/, '')
                             const bufferDataQr = new Buffer.from(data, 'base64');
-                            let scan = await parent.sendImage(from, bufferDataQr, 'Scan QR ini untuk jadi bot sementara\n\n1. Klik titik tiga di pojok kanan atas\n2. Ketuk WhatsApp Web\n3. Scan QR ini \nQR Expired dalam 20 detik', msg)
+                            let scan = await parent.sendImage(from, bufferDataQr, 'scan qr ini untuk jadi bot sementara\n\n1. klik titik tiga di pojok kanan atas\n2. ketuk WhatsApp Web\n3. scan qr ini \nqr expired dalam 20 detik', msg)
                             setTimeout(() => {
                                 parent.deleteMessage(from, scan.key)
                             }, 30000)
@@ -1026,7 +1026,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                 const namaPack = q.split('|')[0] ? q.split('|')[0] : q
                 const authorPack = q.split('|')[1] ? q.split('|')[1] : ''
                 exif.create(namaPack, authorPack)
-                await reply('Done gan')
+                await reply('Done ')
             }
                 break
             case prefix + 'sticker':
@@ -1545,7 +1545,7 @@ xinz.sendMessage(from, me, text, { quoted: msg, contextInfo: {
                             {buttonId: prefix+'truth', buttonText: {displayText: 'Truth 😝'}, type: 1},
                             {buttonId: prefix+'dare', buttonText: {displayText: 'Dare 😇'}, type: 1}
                                        ]
-                sendButloc(from, `Halo sayang @${sender.split("@")[0]}\nmau maen game tantangan ? harus di selesain ya kan tantangannya 😅`, `Silahkan pilih tantangan di bawah sayang`, imgke, buttons1)
+                sendButloc(from, `Halo @${sender.split("@")[0]} sayang\nmau maen game tantangan ? harus di selesain ya kan tantangannya 😅`, `Silahkan pilih tantangan di bawah sayang`, imgke, buttons1)
                 break
             case prefix + 'truth':
                 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
@@ -2368,7 +2368,7 @@ Data Berhasil Didapatkan!
                 if (args.length < 2) return reply(`Penggunaan :\n*${prefix}delprem* idgroup`)
                 sewa.splice(_sewa.getSewaPosition(args[1], sewa), 1)
                 fs.writeFileSync('./database/sewa.json', JSON.stringify(sewa))
-                reply(`Sukses lur`)
+                reply(`Sukses`)
                 break 
                            
             //------------------< BAN >-------------------            
@@ -2763,7 +2763,7 @@ const buttonMessage = {
                 if (!isOwner) return reply(mess.OnlyOwner)
                 if (args.length < 2) return reply(`Masukkan text`)
                      let hedehbre = [
-                            {buttonId: prefix+'menubot', buttonText: {displayText: '⏪ Back to menu'}, type: 1},
+                            {buttonId: prefix+'menubot', buttonText: {displayText: 'back to menu'}, type: 1},
                             {buttonId: prefix+'update', buttonText: {displayText: 'Update Bot'}, type: 1}
                                        ]  
                       const buttonMessagee = {
@@ -2854,7 +2854,7 @@ const buttonMessage = {
                 } catch {
                     var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
                 }
-                let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelcome ? 'Aktif' : 'Mati'}\n*Left :* ${isLeft ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*AntiWame :* ${isAntiWame ? 'Aktif' : 'Mati'}\n*antiviewonce :* ${isAntiVO ? 'Aktif' : 'mati'}\n*AntiBadword :* ${isBadword ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
+                let ingfo = `*G R O U P   I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome :* ${isWelcome ? 'Aktif' : 'Mati'}\n*Left :* ${isLeft ? 'Aktif' : 'Mati'}\n*AntiLink :* ${isAntiLink ? 'Aktif' : 'Mati'}\n*AntiWame :* ${isAntiWame ? 'Aktif' : 'Mati'}\n*antiviewonce :* ${isAntiVO ? 'Aktif' : 'mati'}\n*AntiBadword :* ${isBadword ? 'Aktif' : 'Mati'}\n*Desc :* \n${groupMetadata.desc}`
                 xinz.sendMessage(from, await getBuffer(pic), image, { quoted: msg, caption: ingfo, contextInfo: { "mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')] } })
                 break
 //CASE SHARLOK BY MARCELL 
